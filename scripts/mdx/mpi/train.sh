@@ -8,7 +8,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 source .venv/bin/activate
 
-PROJECT_DIR="/model/kodama/tuning-competition-baseline" # FIXME: Change this to your project directory.
+PROJECT_DIR="/model/kodama/tuning_competition2025" # FIXME: Change this to your project directory.
 export TMPDIR=${PROJECT_DIR}/tmp
 
 # distributed settings

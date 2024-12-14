@@ -6,7 +6,7 @@ ulimit -n 65536 1048576
 
 source .venv/bin/activate
 
-PROJECT_DIR="/model/kodama/tuning-competition-baseline" # FIXME: Change this to your project directory.
+PROJECT_DIR="/model/kodama/tuning_competition2025" # FIXME: Change this to your project directory.
 export TMPDIR=${PROJECT_DIR}/tmp
 
 MODEL_NAME=$1
