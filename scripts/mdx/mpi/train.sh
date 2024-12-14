@@ -31,7 +31,7 @@ export CUDA_LAUNCH_BLOCKING=0
 
 NAME="sft-"$(tr -dc 0-9A-Za-z < /dev/urandom | fold -w 10 | head -1)
 MODEL=llm-jp-3-13b
-MODEL_PATH="/path/to/model"  # FIXME: Change this to your model path. e.g. ${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-3-13b
+MODEL_PATH=${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-3-13b  # FIXME: Change this to your model path.
 
 # run
 mpirun -np $NUM_GPUS \
