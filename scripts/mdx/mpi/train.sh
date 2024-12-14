@@ -10,6 +10,7 @@ source .venv/bin/activate
 
 PROJECT_DIR="/model/kodama/tuning_competition2025" # FIXME: Change this to your project directory.
 export TMPDIR=${PROJECT_DIR}/tmp
+mkdir -p ${TMPDIR}
 
 # GPU settings
 export NUM_NODES=1
