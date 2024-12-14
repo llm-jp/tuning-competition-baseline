@@ -116,8 +116,7 @@ result
 log
 
 # data
-tuning
-rm
+datasets
 
 # dependncies
 apex/
