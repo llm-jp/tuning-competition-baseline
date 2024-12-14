@@ -11,7 +11,7 @@ export TMPDIR=${PROJECT_DIR}/tmp
 
 INPUT_NAME_OR_PATH="llm-jp/llm-jp-3-13b"
 OUTPUT_PATH=${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-3-13b
-HPARAMS_FILE=${PROJECT_DIR}/megatron_configs/llm-jp/llm-jp-3-13b.yaml
+HPARAMS_FILE=${PROJECT_DIR}/tuning-competition-baseline/megatron_configs/llm-jp/llm-jp-3-13b.yaml
 
 # run
 python scripts/ckpt/convert_llama_hf_to_nemo.py \
