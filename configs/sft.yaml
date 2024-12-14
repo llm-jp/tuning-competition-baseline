@@ -1,7 +1,7 @@
 defaults:
   - base
   - exp_manager: sft
-  - model: v3-1.8b
+  - model: llm-jp-3-13b
   - trainer: sft
   - _self_
 
@@ -20,7 +20,7 @@ data:
   # split_dev: whether to split the dataset into training and validation datasets. If false, the dataset is used for training only.
   # upsampling_factor: upsampling factor for the dataset. 1 means no upsampling. Valid for both training and validation datasets.
 datasets:
-  ac_002:
+  answer_carefully:
     max_train_samples: -1 # -1 means all
     split_dev: false
     upsampling_factor: 16
@@ -44,15 +44,7 @@ datasets:
     max_train_samples: -1
     split_dev: true
     upsampling_factor: 1
-  format:
-    max_train_samples: -1
-    split_dev: false
-    upsampling_factor: 1
-  ichikara_004_002_simpleanswer:
-    max_train_samples: -1
-    split_dev: true
-    upsampling_factor: 1
-  ichikara_004_002_single:
+  ichikara:
     max_train_samples: -1
     split_dev: true
     upsampling_factor: 1
@@ -60,11 +52,11 @@ datasets:
     max_train_samples: -1
     split_dev: true
     upsampling_factor: 1
-  multiturn_calm3_orig:
+  multiturn_calm3:
     max_train_samples: -1
     split_dev: true
     upsampling_factor: 1
-  random_to_fixed_multiturn_calm3_orig:
+  random_to_fixed_multiturn_calm3:
     max_train_samples: -1
     split_dev: true
     upsampling_factor: 1
