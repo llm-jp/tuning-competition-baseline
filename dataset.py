@@ -107,9 +107,7 @@ def load_datasets(cfg: DictConfig) -> tuple[list[dict], list[dict]]:
     total_train_examples: list[dict] = []
     total_dev_examples: list[dict] = []
     for data_name, data_info in cfg.datasets.items():
-        dataset_path: Path = Path(
-            f"{cfg.data_dir}/{cfg.data_version}/tuning/train/{data_name}.jsonl"
-        )
+        dataset_path: Path = Path(f"{cfg.data_dir}/{data_name}.jsonl")
         if not dataset_path.exists():
             raise FileNotFoundError(f"{dataset_path} does not exist.")
         if data_info.max_train_samples == 0:

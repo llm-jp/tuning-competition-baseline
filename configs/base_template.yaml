@@ -2,16 +2,15 @@
 defaults:
   - _self_
 
-project: llm-jp-nemo-aligner  # wandb project name
+project: tuning-competition-baseline  # wandb project name
 entity: xxx  # FIXME: wandb entity name
 
 # path to original working directory
 # hydra hijacks working directory by changing it to the current log directory,
 # so it's useful to have this path as a special variable
 # https://hydra.cc/docs/next/tutorials/basic/running_your_app/working_directory
-work_dir: ${hydra:runtime.cwd}     # FIXME: This directory is for storing models and logs
-data_dir: "/path/to/data" # FIXME: This directory is for storing datasets
-data_version: "20241013" # FIXME: This is the version of the dataset
+work_dir: ${hydra:runtime.cwd}     # FIXME: This directory is for storing models and logs. default is the current working directory
+data_dir: "./datasets/tuning-competition-datasets"
 
 # seed for random number generators in pytorch, numpy and python.random
 seed: 42
