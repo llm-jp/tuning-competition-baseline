@@ -45,17 +45,17 @@ reduce_amax: True # Perform reduction to sync amax tensors across GPUs after eve
 use_emha: False # Use fused multi-head attention for large sequence-length. Note this is not yet supported. Please set to False.
 
 peft:
-    peft_scheme: "none"  # ["lora", "none"]
-    restore_from_path: null
-    lora_tuning:
-      target_modules: ['attention_qkv'] # this can either be 'attention_qkv','attention_dense','mlp_fc1','mlp_fc2', 'attention' (qkv & dense), 'mlp' (fc1 & fc2), 'all'
-      adapter_dim: 32
-      adapter_dropout: 0.0
-      column_init_method: 'xavier' # IGNORED if linear_adapter is used, options: xavier, zero or normal
-      row_init_method: 'zero' # IGNORED if linear_adapter is used, options: xavier, zero or normal
-      layer_selection:  null  # selects in which layers to add lora adapters. e.g. [1,12] will add lora to layer 1 (lowest) and 12. null will apply adapters to all layers
-      weight_tying: False
-      position_embedding_strategy: null # used only when weight_tying is True
+  peft_scheme: "none"  # ["lora", "none"]
+  restore_from_path: null
+  lora_tuning:
+    target_modules: ['attention_qkv'] # this can either be 'attention_qkv','attention_dense','mlp_fc1','mlp_fc2', 'attention' (qkv & dense), 'mlp' (fc1 & fc2), 'all'
+    adapter_dim: 32
+    adapter_dropout: 0.0
+    column_init_method: 'xavier' # IGNORED if linear_adapter is used, options: xavier, zero or normal
+    row_init_method: 'zero' # IGNORED if linear_adapter is used, options: xavier, zero or normal
+    layer_selection:  null  # selects in which layers to add lora adapters. e.g. [1,12] will add lora to layer 1 (lowest) and 12. null will apply adapters to all layers
+    weight_tying: False
+    position_embedding_strategy: null # used only when weight_tying is True
 
 optim:
   name: fused_adam # Supports distributed optimizer for memory savings. To enable, set to 'distributed_fused_adam'. Needs Apex to be built with specific args to work.
@@ -69,13 +69,3 @@ optim:
     warmup_steps: 20
     constant_steps: 100
     min_lr: ${min_lr}
-
-# The following parameters are used for the reward model.
-regression:
-    num_attributes: 5
-    merge_attributes: False
-    attribute_weights: null
-    loss_mask_val: -100
-output_sequence: False
-use_avg_pool: False
-force_head_dtype: float32
