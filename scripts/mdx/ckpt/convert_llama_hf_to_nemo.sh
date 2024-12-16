@@ -9,6 +9,17 @@ source .venv/bin/activate
 PROJECT_DIR="/model/kodama/tuning_competition2025" # FIXME: Change this to your project directory.
 export TMPDIR=${PROJECT_DIR}/tmp
 
+# For 1.8B model
+# INPUT_NAME_OR_PATH="llm-jp/llm-jp-1.8b"
+# OUTPUT_PATH=${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-1.8b
+# HPARAMS_FILE=${PROJECT_DIR}/tuning-competition-baseline/megatron_configs/llm-jp/llm-jp-1.8b.yaml
+
+# For 3.7B model
+# INPUT_NAME_OR_PATH="llm-jp/llm-jp-3.7b"
+# OUTPUT_PATH=${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-3.7b
+# HPARAMS_FILE=${PROJECT_DIR}/tuning-competition-baseline/megatron_configs/llm-jp/llm-jp-3.7b.yaml
+
+# For 13B model
 INPUT_NAME_OR_PATH="llm-jp/llm-jp-3-13b"
 OUTPUT_PATH=${PROJECT_DIR}/checkpoints/hf-to-nemo/llm-jp--llm-jp-3-13b
 HPARAMS_FILE=${PROJECT_DIR}/tuning-competition-baseline/megatron_configs/llm-jp/llm-jp-3-13b.yaml

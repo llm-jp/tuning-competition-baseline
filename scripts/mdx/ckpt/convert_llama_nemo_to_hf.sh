@@ -11,7 +11,7 @@ export TMPDIR=${PROJECT_DIR}/tmp
 
 MODEL_NAME=$1
 INPUT_NAME_OR_PATH=${PROJECT_DIR}/result/${MODEL_NAME}
-INPUT_HF_PATH="llm-jp/llm-jp-3-13b"
+INPUT_HF_PATH="llm-jp/llm-jp-3-13b" # FIXME: Set the huggingface checkpoint path or model name.
 OUTPUT_PATH=${PROJECT_DIR}/checkpoints/nemo-to-hf
 MODEL_ID=$(basename ${INPUT_NAME_OR_PATH}) # The lowest directory name in INPUT_NAME_OR_PATH is used as the model id. You can specify the model id by overwriting this variable.
 
