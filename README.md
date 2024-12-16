@@ -21,7 +21,7 @@ bash ./scripts/mdx/install.sh
 
 ### チューニング用データセットのダウンロード
 
-再配布可能なライセンスを持つデータセットは[こちら]() に前処理済みのものを準備しているのでダウンロードしてください．
+再配布可能なライセンスを持つデータセットは[こちら](https://drive.google.com/drive/folders/1sPURwuXSjDS_hrnJmqMLfYJsu_fCwYel)に前処理済みのものを準備しているのでダウンロードしてください．
 ダウンロードした zip ファイルは解凍すると以下のような構造になっています．
 ```
 tuning-competition-datasets/
